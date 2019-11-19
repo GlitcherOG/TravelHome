@@ -13,7 +13,6 @@ public class Enemy : MonoBehaviour
     public NavMeshAgent agent;
 
 
-    // Start is called before the first frame update
     void Start()
     {
         //Gets the points from the way point parent
@@ -36,9 +35,9 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
     void Update()
     {
+        //If current waypoint has reached hasnt run end of all avaiable points
         if (currentWaypoint != points.Length)
         {
             // get the current waypoint
@@ -53,7 +52,7 @@ public class Enemy : MonoBehaviour
                 currentWaypoint++;
             }
         }
-        else
+        else //Reset back to point 1
         {
             currentWaypoint = 1;
         }
